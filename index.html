@@ -8,23 +8,34 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Content changed</p>
-
-    <div class="container">
-        <div class="row">
-          <div class="col-md-4 bg-primary text-white p-3 mb-3">1</div>
-          <div class="col-md-4 bg-secondary text-white p-3 mb-3">2</div>
-          <div class="col-md-4 bg-success text-white p-3 mb-3">3</div>
-          <div class="col-md-4 bg-danger text-white p-3 mb-3">4</div>
-          <div class="col-md-4 bg-warning text-dark p-3 mb-3">5</div>
-          <div class="col-md-4 bg-info text-dark p-3 mb-3">6</div>
-        </div>
-
-
-        <h2>Responsive Columns</h2>
+    
+     <div class="container d-flex justify-content-center align-items-center vh-100">
         
-      </div>
+         <div class="ring-animation"></div>
+     </div>
 
+     <style>
+         .ring-animation {
+             width: 100px;
+             height: 100px;
+             border-radius: 50%;
+             border: 5px solid transparent;
+             animation: expand-shrink 4s infinite, color-change 6s infinite;
+         }
+
+         @keyframes expand-shrink {
+             0%, 100% { transform: scale(1); }
+             50% { transform: scale(20); }
+         }
+
+         @keyframes color-change {
+             0% { border-color: red; }
+             33% { border-color: green; }
+             66% { border-color: blue; }
+             100% { border-color: red; }
+
+         }
+     </style>
 
 
 
